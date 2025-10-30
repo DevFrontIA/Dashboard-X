@@ -1,0 +1,123 @@
+/* ======== ESTILO GLOBAL DO DASHBOARD IA S1 ======== */
+
+/* Reset básico e tipografia */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+  background-color: #0f0f23;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow: hidden;
+}
+
+/* Scroll suave nas mensagens */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #3b3b4f;
+  border-radius: 4px;
+}
+
+/* Contêiner principal */
+#root {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Layout interno do chat */
+.flex {
+  display: flex;
+}
+.flex-col {
+  flex-direction: column;
+}
+.gap-2 {
+  gap: 0.5rem;
+}
+
+/* Animações */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.message {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Campos de input */
+input {
+  outline: none;
+  border: none;
+  background: white;
+  font-size: 1rem;
+  transition: all 0.2s ease-in-out;
+}
+input:focus {
+  box-shadow: 0 0 0 2px #00e5ff;
+}
+
+/* Botão Enviar */
+button {
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+button:hover {
+  transform: scale(1.05);
+}
+
+/* Estilo do cabeçalho */
+h1 {
+  text-shadow: 0 0 10px #00e5ff;
+}
+
+/* Cores do chat */
+.bg-blue-600 {
+  background-color: #2563eb;
+}
+.bg-gray-700 {
+  background-color: #374151;
+}
+.bg-cyan-500 {
+  background-color: #06b6d4;
+}
+.bg-cyan-600 {
+  background-color: #0891b2;
+}
+.bg-[#0f0f23] {
+  background-color: #0f0f23;
+}
+.bg-[#1a1a2e] {
+  background-color: #1a1a2e;
+}
+
+/* Responsividade para celular */
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.3rem;
+  }
+
+  input {
+    font-size: 0.9rem;
+  }
+
+  button {
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+  }
+}
